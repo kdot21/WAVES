@@ -36,6 +36,10 @@ body > #main-content {
   min-height: 100%;
 }
 
+h2 {
+  text-align: center;
+}
+
 #city-container {
     width: 200px;
     height: 100px;
@@ -48,6 +52,16 @@ body > #main-content {
     right: 0;
 
     margin: auto;
+}
+
+#flexbox {
+  display: flex;
+  justify-content: space-around;
+  padding: 4em;
+}
+
+.flexitem {
+  background-color: lightblue;
 }
 
 footer {
