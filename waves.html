@@ -6,8 +6,6 @@
     <title>WAVES</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Antic" rel="stylesheet">
-    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js></script>
-    <script src=scripts/main.js></script>
   </head>
   <body>
 
@@ -21,17 +19,24 @@
 
         <div id = "city-container">
           <h2>CITY:</h2>
-          <form action="" id = "form-search-bar"><input type="search"><input type = "button" value = "Submit"></form>
+
+          <form action="" id = "search-form">
+            <input id ="search-bar" placeholder = "Search by city"></input>
+            <button id = "search-button">Search</button>
+          </form>
+
         </div>
 
         <div id = "flex-box">
 
           <div class = "flex-item">
             <h2>FORECAST:</h2>
+            <div id = "forecast-results"></div>
           </div>
 
-          <div class = "flex-item" id = "surf-spots">
+          <div class = "flex-item" id = "surf-spots-div">
             <h2>SURF SPOTS:</h2>
+            <ul id = "surf-spots-ul"></ul>
           </div>
 
           <div class = "flex-item">
@@ -48,5 +53,7 @@
 
     </div>
 
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js></script>
+    <script src=scripts/main.js></script>
   </body>
 </html>
