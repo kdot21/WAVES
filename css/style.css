@@ -54,14 +54,21 @@ h2 {
     margin: auto;
 }
 
-#flex-box {
+.container{
   display: flex;
   justify-content: space-around;
-  padding: 4em;
+  flex-direction: row;
 }
 
-.flex-item {
+.item {
   background-color: lightgray;
+  margin: 4em;
+}
+
+#map {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
 }
 
 footer {
