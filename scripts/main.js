@@ -48,36 +48,37 @@ console.log('js!');
 
 $(document).ready(function() {
   console.log('jQuery!')
-  // // Weather Underground API for search capabilites
-  // var WEATHER_UNDERGROUND_API = 'http://api.wunderground.com/api/b9a4b3dc52783dbb/conditions/q/';
 
-  // var testCity = WEATHER_UNDERGROUND_API + 'CA/San_Francisco.json';
+  // Weather Underground API for search capabilites
+  var WEATHER_UNDERGROUND_API = 'http://api.wunderground.com/api/b9a4b3dc52783dbb/conditions/q/';
 
-  // var forecastResults = $('#forecast-results');
+  var testCity = WEATHER_UNDERGROUND_API + 'CA/San_Francisco.json';
 
-  // function testCallWeatherAPI() {
-  //   $.get(testCity, function(whatever){
-  //     console.log(whatever);
-  //   })
-  // }
+  var forecastResults = $('#forecast-results');
 
-  // testCallWeatherAPI();
+  function testCallWeatherAPI() {
+    $.get(testCity, function(whatever){
+      console.log(whatever);
+    })
+  }
 
-  // function callWeatherAPI(city) {
-  //   if (city.length == 0) {
-  //     forecastResults.html('Please enter a city name into the search bar');
-  //   } else {
-  //     $.get(WEATHER_UNDERGROUND_API + city, function(forecastResults) {
+  testCallWeatherAPI();
 
-  //     });
-  //   }
-  // }
+  function callWeatherAPI(city) {
+    if (city.length == 0) {
+      forecastResults.html('Please enter a city name into the search bar');
+    } else {
+      $.get(WEATHER_UNDERGROUND_API + city, function(forecastResults) {
 
-  // $('#search-button').on('click', function(e) {
-  //   e.preventDefault();
+      });
+    }
+  }
 
-  //   callWeatherAPI($('#search-bar').val());
-  // });
+  $('#search-button').on('click', function(e) {
+    e.preventDefault();
+
+    callWeatherAPI($('#search-bar').val());
+  });
 
   // Appending array of surf spots
   var surfSpots = [
@@ -92,14 +93,14 @@ $(document).ready(function() {
     'Monahan\'s Dock'
   ];
 
-  $('#search-button').on('mouseover', function() {
+  // $('#search-button').on('mouseover', function() {
 
-    $.each(surfSpots, function(i,e) {
-      var spotsLi = "<li>";
-      spotsLi += e + "</li>";
-      $(spotsLi).appendTo('#surf-spots-ul');
+  //   $.each(surfSpots, function(i,e) {
+  //     var spotsLi = "<li>";
+  //     spotsLi += e + "</li>";
+  //     $(spotsLi).appendTo('#surf-spots-ul');
 
-    });
-  });
+  //   });
+  // });
 
 });
